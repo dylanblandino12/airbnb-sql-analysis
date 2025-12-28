@@ -38,5 +38,7 @@ This inconsistency was kept in the dataset and handled appropriately during anal
 ## Key Findings
 
 - The selected city has **413 active Airbnb listings**.
-
 - The city has **413 Airbnb listings managed by 339 unique hosts**, indicating that some hosts operate multiple properties.
+- Airbnb pricing varies by district, with **Hampden showing the highest average prices**.
+
+
