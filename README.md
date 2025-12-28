@@ -19,8 +19,7 @@ After validating that the `id` column contains unique and non-null values, it wa
 
 - `listings.id` is the primary key of the listings table.
 - `reviews.listing_id` acts as a logical foreign key referencing `listings.id`.
-- `neighbourhoods.neighbourhood_group` acts as a logical primary key for neighbourhood classification.
-- `listings.neighbourhood_group` acts as a logical foreign key referencing `neighbourhoods.neighbourhood_group`.
+- `neighbourhood_group` exists as a geographical attribute; however, its population in the listings table is limited and therefore not used for district-level analysis.
 
 Foreign key constraints were not physically enforced, as this is an analytical dataset.
 
@@ -29,6 +28,13 @@ Foreign key constraints were not physically enforced, as this is an analytical d
 
 During validation, one listing was found with a `neighbourhood_group` value that does not match any record in the `neighbourhoods` table.  
 This inconsistency was kept in the dataset and handled appropriately during analysis.
+
+## Data Limitations
+
+- The `neighbourhood_group` field in the listings table contains mostly null values, with only one populated district.
+- Due to this limitation, district-level analysis was not meaningful for this dataset.
+- The analysis focuses primarily on neighbourhood-level insights, where sufficient data granularity is available.
+
 
 ## SQL Files
 - 00_schema_setup.sql
@@ -39,6 +45,6 @@ This inconsistency was kept in the dataset and handled appropriately during anal
 
 - The selected city has **413 active Airbnb listings**.
 - The city has **413 Airbnb listings managed by 339 unique hosts**, indicating that some hosts operate multiple properties.
-- Airbnb pricing varies by district, with **Hampden showing the highest average prices**.
+- Airbnb pricing varies by neighbourhood, with **Hampden showing the highest average prices**.
 
 
