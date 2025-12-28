@@ -1,6 +1,7 @@
--- ==============================
--- Dataset Exploration
--- ==============================
+-- File: 01_exploration.sql
+-- Description: Initial exploration and data quality validation
+-- Dataset: Airbnb (Denver)
+-- Notes: Focused on understanding structure and relationships
 
 -- Validate primary key candidate
 
