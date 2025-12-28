@@ -1,6 +1,14 @@
 # airbnb-sql-analysis
 SQL analysis of Airbnb data to identify pricing trends and investment opportunities
 
+## Dataset
+Source: Inside Airbnb  
+https://insideairbnb.com/denver/
+
+### Data Scope
+- The original dataset contains historical data across multiple years.
+- Due to size constraints, only reviews from **September 2025** were used in this analysis.
+
 ## Data Model
 
 ### Primary Key
@@ -21,3 +29,13 @@ Foreign key constraints were not physically enforced, as this is an analytical d
 
 During validation, one listing was found with a `neighbourhood_group` value that does not match any record in the `neighbourhoods` table.  
 This inconsistency was kept in the dataset and handled appropriately during analysis.
+
+## SQL Files
+- 00_schema_setup.sql
+- 01_exploration.sql
+- 02_business_questions.sql
+
+## Key Findings
+
+- The selected city has **413 active Airbnb listings**.
+
