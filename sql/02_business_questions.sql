@@ -16,3 +16,14 @@ FROM listings;
 
 -- Result: 339 unique hosts
 
+-- Q4: What is the average Airbnb price per district?
+SELECT
+  neighbourhood_group AS district,
+  ROUND(AVG(price), 2) AS avg_price
+FROM listings
+WHERE price IS NOT NULL
+GROUP BY neighbourhood_group
+ORDER BY avg_price DESC;
+
+-- Result: Average prices vary significantly across districts
+
