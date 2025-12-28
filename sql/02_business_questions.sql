@@ -25,5 +25,17 @@ WHERE price IS NOT NULL
 GROUP BY neighbourhood_group
 ORDER BY avg_price DESC;
 
--- Result: Average prices vary significantly across districts
+-- Note: This analysis was not meaningful due to limited population
+-- of the neighbourhood_group field (mostly NULL values).
+
+-- Q5: What is the average Airbnb price per neighbourhood?
+SELECT
+  neighbourhood AS neighborhood,
+  ROUND(AVG(price), 2) AS avg_price
+FROM listings
+WHERE price IS NOT NULL
+GROUP BY neighbourhood
+ORDER BY avg_price DESC;
+
+-- Result: Significant price variation observed across neighbourhoods
 
