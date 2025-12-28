@@ -9,3 +9,10 @@ SELECT COUNT(*) AS total_listings
 FROM listings;
 
 -- Result: 413 listings
+
+-- Q3: What is the total number of Airbnb hosts?
+SELECT COUNT(DISTINCT host_id) AS total_hosts
+FROM listings;
+
+-- Result: 339 unique hosts
+
