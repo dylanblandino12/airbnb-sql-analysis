@@ -5,13 +5,15 @@
 -- =====================================
 
 -- Q2: What is the total number of Airbnb listings in the selected city?
-SELECT COUNT(*) AS total_listings
+SELECT 
+  COUNT(*) AS total_listings
 FROM listings;
 
 -- Result: 413 listings
 
 -- Q3: What is the total number of Airbnb hosts?
-SELECT COUNT(DISTINCT host_id) AS total_hosts
+SELECT 
+  COUNT(DISTINCT host_id) AS total_hosts
 FROM listings;
 
 -- Result: 339 unique hosts
@@ -25,8 +27,7 @@ WHERE price IS NOT NULL
 GROUP BY neighbourhood_group
 ORDER BY avg_price DESC;
 
--- Note: This analysis was not meaningful due to limited population
--- of the neighbourhood_group field (mostly NULL values).
+-- Note: This analysis was not meaningful due to limited population of the neighbourhood_group field (mostly NULL values).
 
 -- Q5: What is the average Airbnb price per neighbourhood?
 SELECT
@@ -38,4 +39,20 @@ GROUP BY neighbourhood
 ORDER BY avg_price DESC;
 
 -- Result: Significant price variation observed across neighbourhoods
+
+-- Q6: Top 10 most visited neighbourhoods based on number of reviews
+SELECT
+  l.neighbourhood,
+  COUNT(r.listing_id) AS total_reviews
+FROM reviews r
+JOIN listings l
+  ON r.listing_id = l.id
+GROUP BY l.neighbourhood
+ORDER BY total_reviews DESC
+LIMIT 10;
+
+-- Note: Number of reviews is used as a proxy for visit popularity
+
+
+
 
