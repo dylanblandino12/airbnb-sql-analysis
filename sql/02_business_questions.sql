@@ -75,6 +75,17 @@ FROM listings
 GROUP BY neighbourhood
 ORDER BY total_listings_per_neighbourhood DESC;
 
+-- Result: A small number of neighbourhoods concentrate most Airbnb listings, while the majority have limited supply.
 
+
+-- Q9: Number of Airbnb Listings by Room Type
+SELECT 
+  room_type,
+  COUNT(*) AS total_listings_per_room
+FROM listings
+GROUP BY room_type
+ORDER BY total_listings_per_room DESC;
+
+-- Result: Entire home/apartment listings dominate the market, suggesting limited prevalence of shared accommodation models.
 
 
