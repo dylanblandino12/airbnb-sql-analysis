@@ -49,5 +49,7 @@ This inconsistency was kept in the dataset and handled appropriately during anal
 - The selected city has **413 active Airbnb listings**.
 - The city has **413 Airbnb listings managed by 339 unique hosts**, indicating that some hosts operate multiple properties.
 - Airbnb pricing varies by neighbourhood, with **Hampden showing the highest average prices**.
+- The top 10 neighbourhoods by number of reviews in September were identified as the most visited areas, indicating higher demand concentration.
+
 
 
