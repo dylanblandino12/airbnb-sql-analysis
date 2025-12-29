@@ -67,5 +67,14 @@ FROM (
 GROUP BY total_listings_per_owner
 ORDER BY total_listings_per_owner;
 
+-- Q8: Number of Airbnb listings per neighbourhood
+SELECT
+  neighbourhood,
+  COUNT(*) AS total_listings_per_neighbourhood
+FROM listings
+GROUP BY neighbourhood
+ORDER BY total_listings_per_neighbourhood DESC;
+
+
 
 
