@@ -1,6 +1,6 @@
 # airbnb-sql-analysis
 
-![Project Workflow](images/airbnb_sql_project_overview.png)
+![Project Workflow](images/airbnb_sql_project_overview.jpg)
 
 SQL analysis of Airbnb data to identify pricing trends and investment opportunities
 
