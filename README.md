@@ -52,6 +52,7 @@ This inconsistency was kept in the dataset and handled appropriately during anal
 - The top 10 neighbourhoods by number of reviews in September were identified as the most visited areas, indicating higher demand concentration.
 - Most hosts manage a single Airbnb listing, while a smaller group of hosts operate multiple properties, indicating some level of market concentration.
 - Airbnb listings are unevenly distributed across neighbourhoods. **Areas such as Five Points, CBD, and Capitol Hill ** concentrate the highest number of properties, while most neighbourhoods have only a small number of listings.
+- Most Airbnb listings are entire homes or apartments, indicating a market focused on full-property rentals rather than shared accommodations.
 
 
 
