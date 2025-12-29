@@ -53,6 +53,19 @@ LIMIT 10;
 
 -- Note: Number of reviews is used as a proxy for visit popularity
 
+-- Q7: Distribution of Airbnb listings per host
+SELECT
+  total_listings_per_owner,
+  COUNT(host_id) AS number_of_hosts
+FROM (
+  SELECT
+    host_id,
+    COUNT(*) AS total_listings_per_owner
+  FROM listings
+  GROUP BY host_id
+) t
+GROUP BY total_listings_per_owner
+ORDER BY total_listings_per_owner;
 
 
 
