@@ -101,3 +101,20 @@ ORDER BY avg_price_per_room_type DESC;
 -- Result: Entire homes and hotel rooms have the highest average prices, while private and shared rooms are significantly cheaper.
 -- Note: Price differences by room type highlight clear market segmentation based on accommodation offering.
 
+-- Q11: Average Price by Room Type and Neighbourhood
+-- considering only groups with at least 3 listings
+SELECT
+  room_type,
+  neighbourhood,
+  ROUND(AVG(price), 2) AS avg_price,
+  COUNT(*) AS listing_count
+FROM listings
+WHERE price IS NOT NULL
+GROUP BY room_type, neighbourhood
+HAVING COUNT(*) >= 3
+ORDER BY room_type, avg_price DESC;
+
+-- Result: Average prices vary significantly by room type and neighbourhood.
+-- Note: Some high average prices may be driven by a small number of listings,
+-- which can introduce outliers in certain neighbourhoods.
+
