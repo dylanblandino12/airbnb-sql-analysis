@@ -54,6 +54,7 @@ This inconsistency was kept in the dataset and handled appropriately during anal
 - Airbnb listings are unevenly distributed across neighbourhoods. **Areas such as Five Points, CBD, and Capitol Hill ** concentrate the highest number of properties, while most neighbourhoods have only a small number of listings.
 - Most Airbnb listings are entire homes or apartments, indicating a market focused on full-property rentals rather than shared accommodations.
 - Pricing analysis by room type shows strong segmentation, **with entire homes and apartments priced significantly higher** than private or shared accommodations.
+- Average Airbnb prices vary significantly by both room type and neighbourhood. Some neighbourhoods show very high average prices, which may be influenced by a small number of premium listings.
 
 
 
