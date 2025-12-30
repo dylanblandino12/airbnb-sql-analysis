@@ -88,4 +88,16 @@ ORDER BY total_listings_per_room DESC;
 
 -- Result: Entire home/apartment listings dominate the market, suggesting limited prevalence of shared accommodation models.
 
+-- Q10: Average Price by Room Type
+SELECT 
+  room_type,
+  ROUND(AVG(price), 2) AS avg_price_per_room_type
+FROM listings
+WHERE price IS NOT NULL
+GROUP BY room_type
+ORDER BY avg_price_per_room_type DESC;
+
+
+-- Result: Entire homes and hotel rooms have the highest average prices, while private and shared rooms are significantly cheaper.
+-- Note: Price differences by room type highlight clear market segmentation based on accommodation offering.
 
