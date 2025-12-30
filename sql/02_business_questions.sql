@@ -229,5 +229,29 @@ ORDER BY rank_reviews;
 
 -- Results: Some hosts consistently offer significantly lower-priced listings, suggesting affordability-focused pricing strategies among certain owners.
 
+-- Q17: Top 3 neighbourhoods by number of reviews
+
+WITH reviews_cte AS(
+SELECT
+	l.neighbourhood,
+  COUNT(r.listing_id) AS total_reviews
+FROM reviews r
+JOIN listings l
+  ON r.listing_id = l.id
+GROUP BY l.neighbourhood),
+ranking AS(
+	SELECT 
+		*, RANK() OVER (ORDER BY total_reviews DESC) AS rank_neighbourhood
+	FROM reviews_cte)
+SELECT 
+	neighbourhood,
+	total_reviews,
+    rank_neighbourhood
+FROM ranking
+WHERE rank_neighbourhood <=3
+ORDER BY
+rank_neighbourhood;
+
+-- Results: A small number of neighbourhoods concentrate the highest volume of guest reviews, indicating higher visitor demand in these areas.
 
 
