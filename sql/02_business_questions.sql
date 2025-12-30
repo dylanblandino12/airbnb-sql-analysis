@@ -115,6 +115,20 @@ HAVING COUNT(*) >= 3
 ORDER BY room_type, avg_price DESC;
 
 -- Result: Average prices vary significantly by room type and neighbourhood.
--- Note: Some high average prices may be driven by a small number of listings,
--- which can introduce outliers in certain neighbourhoods.
+-- Note: Some high average prices may be driven by a small number of listings, which can introduce outliers in certain neighbourhoods.
+
+
+-- Q12: Average Airbnb Availability by Neighbourhood
+
+SELECT 
+  neighbourhood,
+  ROUND(AVG(availability_365)) AS avg_availability
+FROM listings
+GROUP BY neighbourhood
+ORDER BY avg_availability DESC;
+
+-- Result: Average availability varies significantly across neighbourhoods.
+-- Note: High availability may indicate properties dedicated to year-round short-term rentals, while lower availability may reflect higher occupancy or more restricted hosting patterns.
+
+
 
