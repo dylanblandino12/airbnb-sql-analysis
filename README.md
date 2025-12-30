@@ -54,19 +54,19 @@ This inconsistency was kept in the dataset and handled appropriately during anal
 - Airbnb pricing varies by neighbourhood, with **Hampden showing the highest average prices**.
 - The top 10 neighbourhoods by number of reviews in September were identified as the most visited areas, indicating higher demand concentration.
 - Most hosts manage a single Airbnb listing, while a smaller group of hosts operate multiple properties, indicating some level of market concentration.
-- Airbnb listings are unevenly distributed across neighbourhoods. **Areas such as Five Points, CBD, and Capitol Hill ** concentrate the highest number of properties, while most neighbourhoods have only a small number of listings.
 - Most Airbnb listings are entire homes or apartments, indicating a market focused on full-property rentals rather than shared accommodations.
 - Pricing analysis by room type shows strong segmentation, **with entire homes and apartments priced significantly higher** than private or shared accommodations.
 - Average Airbnb prices vary significantly by both room type and neighbourhood. Some neighbourhoods show very high average prices, which may be influenced by a small number of premium listings.
 - Airbnb availability varies notably by neighbourhood. High average availability may reflect properties dedicated to year-round short-term rentals, while lower availability could indicate higher booking activity or more restricted hosting behavior.
-- Airbnb listings are highly concentrated in a few neighbourhoods, with **Five Points, CBD, and Capitol Hill** leading in number of active listings.
+- Airbnb listings are highly concentrated in a small number of neighbourhoods. Areas such as **Five Points, CBD, and Capitol Hill** host a disproportionately large share of listings, while most neighbourhoods have relatively few properties.
 - A small group of hosts stands out for offering consistently low average prices, indicating pricing strategies oriented toward budget-conscious guests.
 - Guest activity is concentrated in a few neighbourhoods, with **Five Points and Highland** receiving the highest number of reviews, indicating stronger visitor demand.
 
 
 ## Investment Recommendation
 
-Based on the analysis of listing distribution, pricing, and guest activity, **Five Points** emerges as the most attractive neighbourhood for Airbnb investment. The area combines high demand—reflected by the highest number of reviews—with a strong concentration of listings and competitive average prices, suggesting consistent occupancy and lower investment risk.
+Based on the analysis of listing distribution, pricing, and guest activity, **Five Points** emerges as the most attractive neighbourhood for Airbnb investment within the analyzed dataset.
+
 
 
 
