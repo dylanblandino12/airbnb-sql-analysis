@@ -56,6 +56,7 @@ This inconsistency was kept in the dataset and handled appropriately during anal
 - Pricing analysis by room type shows strong segmentation, **with entire homes and apartments priced significantly higher** than private or shared accommodations.
 - Average Airbnb prices vary significantly by both room type and neighbourhood. Some neighbourhoods show very high average prices, which may be influenced by a small number of premium listings.
 - Airbnb availability varies notably by neighbourhood. High average availability may reflect properties dedicated to year-round short-term rentals, while lower availability could indicate higher booking activity or more restricted hosting behavior.
+- Airbnb listings are highly concentrated in a few neighbourhoods, with **Five Points, CBD, and Capitol Hill** leading in number of active listings.
 
 
 
