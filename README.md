@@ -61,6 +61,9 @@ This inconsistency was kept in the dataset and handled appropriately during anal
 - Guest activity is concentrated in a few neighbourhoods, with **Five Points and Highland** receiving the highest number of reviews, indicating stronger visitor demand.
 
 
+## Investment Recommendation
+
+Based on the analysis of listing distribution, pricing, and guest activity, **Five Points** emerges as the most attractive neighbourhood for Airbnb investment. The area combines high demand—reflected by the highest number of reviews—with a strong concentration of listings and competitive average prices, suggesting consistent occupancy and lower investment risk.
 
 
 
