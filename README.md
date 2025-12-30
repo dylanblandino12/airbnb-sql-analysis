@@ -2,7 +2,8 @@
 
 ![Project Workflow](images/airbnb_sql_project_overview.jpg)
 
-SQL analysis of Airbnb data to identify pricing trends and investment opportunities
+SQL-based analysis of Airbnb listings to identify pricing patterns, demand concentration, and investment opportunities.
+
 
 ## Dataset
 Source: Inside Airbnb  
@@ -18,6 +19,8 @@ https://insideairbnb.com/denver/
 The original CSV import did not define a primary key.  
 After validating that the `id` column contains unique and non-null values, it was defined as the primary key to ensure data integrity and support joins across tables.
 
+### Relationships
+
 ## Data Model & Relationships
 
 - `listings.id` is the primary key of the listings table.
@@ -32,7 +35,7 @@ Foreign key constraints were not physically enforced, as this is an analytical d
 During validation, one listing was found with a `neighbourhood_group` value that does not match any record in the `neighbourhoods` table.  
 This inconsistency was kept in the dataset and handled appropriately during analysis.
 
-## Data Limitations
+### Data Limitations
 
 - The `neighbourhood_group` field in the listings table contains mostly null values, with only one populated district.
 - Due to this limitation, district-level analysis was not meaningful for this dataset.
