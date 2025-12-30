@@ -178,3 +178,56 @@ ORDER BY rank_neighbourhood;
 
 -- Results: A small number of neighbourhoods concentrate the highest number of Airbnb listings, suggesting a clear geographic clustering of short-term rentals within the city.
 
+-- Q15: Top 5 Hosts by Number of Reviews
+
+WITH reviews_cte AS(
+SELECT
+	l.host_id,
+  l.host_name,
+  COUNT(r.listing_id) AS total_reviews
+FROM reviews r
+JOIN listings l
+  ON r.listing_id = l.id
+GROUP BY l.host_id, l.host_name),
+ranking AS(
+	SELECT 
+		*, RANK() OVER (ORDER BY total_reviews DESC) AS rank_reviews
+	FROM reviews_cte)
+SELECT 
+  host_id,
+  host_name,
+  total_reviews,
+  rank_reviews
+FROM ranking
+WHERE rank_reviews <=5
+ORDER BY
+rank_reviews;
+
+-- Results: Hosts with the highest number of reviews show similar engagement levels, suggesting a competitive and evenly distributed hosting activity.
+
+-- Q16: Top 10 Hosts with the Lowest Average Prices
+
+WITH lower_price_cte AS(
+SELECT
+  host_id,
+  host_name,
+  ROUND(AVG(price),2) AS avg_price
+FROM listings
+GROUP BY host_id, host_name),
+ranking AS(
+	SELECT 
+		*, RANK() OVER (ORDER BY avg_price ASC) AS rank_reviews
+	FROM lower_price_cte)
+SELECT 
+	host_id,
+	host_name,
+	avg_price,
+	rank_reviews
+FROM ranking
+WHERE rank_reviews <=10 AND avg_price IS NOT NULL
+ORDER BY rank_reviews;
+
+-- Results: Some hosts consistently offer significantly lower-priced listings, suggesting affordability-focused pricing strategies among certain owners.
+
+
+
