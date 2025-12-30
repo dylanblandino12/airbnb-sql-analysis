@@ -130,5 +130,51 @@ ORDER BY avg_availability DESC;
 -- Result: Average availability varies significantly across neighbourhoods.
 -- Note: High availability may indicate properties dedicated to year-round short-term rentals, while lower availability may reflect higher occupancy or more restricted hosting patterns.
 
+-- Q13: Top 10 Listings by Number of Reviews
 
+WITH reviews_cte AS(
+SELECT
+	l.id,
+  l.name,
+  COUNT(r.listing_id) AS total_reviews
+FROM reviews r
+JOIN listings l
+  ON r.listing_id = l.id
+GROUP BY l.id, l.name
+ORDER BY total_reviews DESC),
+ranking AS(
+  SELECT 
+    *, RANK() OVER (ORDER BY total_reviews DESC) AS rank_reviews
+  FROM reviews_cte)
+SELECT *
+FROM ranking
+WHERE rank_reviews <=10
+ORDER BY
+rank_reviews;
+
+-- Results: The listings with the highest number of reviews show relatively similar engagement levels, suggesting no single listing dominates guest activity during the analyzed period.
+
+-- Q14: Top 5 Neighbourhoods by Number of Airbnb Listings
+WITH neighbourhood_cte AS (
+  SELECT
+    neighbourhood,
+    COUNT(*) AS total_listings
+  FROM listings
+  GROUP BY neighbourhood
+),
+ranking AS (
+  SELECT
+    *,
+    RANK() OVER (ORDER BY total_listings DESC) AS rank_neighbourhood
+  FROM neighbourhood_cte
+)
+SELECT
+  neighbourhood,
+  total_listings,
+  rank_neighbourhood
+FROM ranking
+WHERE rank_neighbourhood <= 5
+ORDER BY rank_neighbourhood;
+
+-- Results: A small number of neighbourhoods concentrate the highest number of Airbnb listings, suggesting a clear geographic clustering of short-term rentals within the city.
 
