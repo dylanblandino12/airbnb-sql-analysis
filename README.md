@@ -58,6 +58,7 @@ This inconsistency was kept in the dataset and handled appropriately during anal
 - Airbnb availability varies notably by neighbourhood. High average availability may reflect properties dedicated to year-round short-term rentals, while lower availability could indicate higher booking activity or more restricted hosting behavior.
 - Airbnb listings are highly concentrated in a few neighbourhoods, with **Five Points, CBD, and Capitol Hill** leading in number of active listings.
 - A small group of hosts stands out for offering consistently low average prices, indicating pricing strategies oriented toward budget-conscious guests.
+- Guest activity is concentrated in a few neighbourhoods, with **Five Points and Highland** receiving the highest number of reviews, indicating stronger visitor demand.
 
 
 
