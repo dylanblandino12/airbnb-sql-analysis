@@ -255,3 +255,8 @@ rank_neighbourhood;
 -- Results: A small number of neighbourhoods concentrate the highest volume of guest reviews, indicating higher visitor demand in these areas.
 
 
+-- Final Insight:
+-- Based on demand, pricing, and listing concentration, Five Points represents
+-- the most attractive area for Airbnb investment due to consistent guest activity
+-- and proven market demand.
+
